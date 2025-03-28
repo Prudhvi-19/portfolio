@@ -124,9 +124,24 @@ To update your resume:
 
 The contact form uses Formspree for handling submissions:
 
-1. The form is already configured with your Formspree endpoint
-2. Submissions will be sent to your email
-3. You can view and manage submissions in your Formspree dashboard
+1. **Important**: You must update the Formspree endpoint in the Contact component with your own endpoint:
+   ```javascript
+   // In components/Contact.js, change this line:
+   const response = await fetch('https://formspree.io/f/xeoalejv', {
+   
+   // Replace with your own Formspree endpoint:
+   const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+   ```
+   
+   Without changing this, form submissions will go to the original creator's email address, not yours!
+
+2. To get your own Formspree endpoint:
+   - Sign up at [Formspree.io](https://formspree.io/)
+   - Create a new form
+   - Copy your unique form endpoint
+   
+3. After setting up your endpoint, submissions will be sent to your email
+4. You can view and manage submissions in your Formspree dashboard
 
 ## 📱 Mobile Responsiveness
 
