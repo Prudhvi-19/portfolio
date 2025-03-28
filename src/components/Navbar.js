@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled 
+        isScrolled || isMobileMenuOpen
           ? 'bg-white shadow-lg py-2' 
           : 'bg-transparent py-4'
       }`}
@@ -31,7 +31,13 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
             <a href="#home" className="text-2xl font-bold text-blue-600">
-              {personalInfo.name.split(' ')[0]} <span className="text-gray-800">{personalInfo.name.split(' ')[1]}</span>
+              {/* Display just initials on small screens */}
+              <span className="sm:hidden">PSC</span>
+              
+              {/* Display full name with proper spacing on larger screens */}
+              <span className="hidden sm:inline">
+                {personalInfo.name.split(' ')[0]} <span className="text-gray-800">{personalInfo.name.split(' ')[1]}</span>
+              </span>
             </a>
           </div>
           
@@ -55,6 +61,7 @@ const Navbar = () => {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100 focus:outline-none"
+              aria-expanded={isMobileMenuOpen}
             >
               <svg
                 className="h-6 w-6"

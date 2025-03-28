@@ -14,3 +14,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Add this for better scroll positioning with fixed header */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+}

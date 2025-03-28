@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# Prudhvi Sairam Chundru - Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website built with React and Tailwind CSS, showcasing my professional experience, skills, projects, and contact information.
 
-## Available Scripts
+## 🌟 Features
 
-In the project directory, you can run:
+- **Responsive Design**: Optimized for all devices (mobile, tablet, desktop)
+- **Modern UI**: Clean, professional layout with smooth animations
+- **Data-Driven**: Content separated from components for easy updates
+- **Dynamic Sections**:
+  - Hero section with call-to-action buttons
+  - About Me with professional profile
+  - Detailed Work Experience with project descriptions
+  - Education history with relevant coursework
+  - Skills categorized by type
+  - Projects showcase with descriptions and links
+  - Contact form with Formspree integration
+- **Resume Download**: Direct download of resume PDF
+- **Smooth Scrolling**: For better navigation experience
+- **Contact Form Integration**: Using Formspree for easy message submission
 
-### `npm start`
+## 🛠️ Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Frontend library for building the user interface
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **React Hooks**: For state management
+- **Formspree**: Form submission handling
+- **GitHub Pages**: For deployment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Prerequisites
 
-### `npm test`
+- Node.js (v14.0.0 or later)
+- npm (v6.0.0 or later)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Installation
 
-### `npm run build`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Prudhvi-19/portfolio.git
+   cd portfolio
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. Open your browser and visit `http://localhost:3000`
 
-### `npm run eject`
+## 📝 Customization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Updating Content
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+All content is stored in data files in the `src/data` directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `personalInfo.js`: Your name, title, contact information, etc.
+- `experience.js`: Work experience and project details
+- `education.js`: Education history and courses
+- `skills.js`: Technical skills by category
+- `projects.js`: Portfolio projects with descriptions
+- `navLinks.js`: Navigation menu items
+- `awards.js`: Awards and recognitions
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+To update any content, simply modify these files and your changes will be reflected throughout the site.
 
-## Learn More
+### Changing Colors and Styling
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project uses Tailwind CSS for styling. You can customize colors and other styling properties in the `tailwind.config.js` file:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```javascript
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        blue: {
+          600: '#4F46E5', // Primary color
+          // Add custom colors here
+        },
+      },
+      // Add other customizations
+    },
+  },
+  // ...
+}
+```
 
-### Code Splitting
+### Adding a Custom Favicon
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Replace `public/favicon.svg` with your own SVG icon
+2. Ensure the references in `public/index.html` are correct
 
-### Analyzing the Bundle Size
+## 📤 Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This portfolio is configured for easy deployment to GitHub Pages:
 
-### Making a Progressive Web App
+1. Update the `homepage` field in `package.json` with your GitHub Pages URL:
+   ```json
+   "homepage": "https://yourusername.github.io/portfolio"
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Deploy to GitHub Pages:
+   ```bash
+   npm run deploy
+   ```
 
-### Advanced Configuration
+3. Your site will be available at the URL specified in your `homepage` field
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📄 Resume
 
-### Deployment
+To update your resume:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Replace the file at `public/files/Prudhvi_Sairam_Chundru_Resume.pdf` with your updated resume
+2. Ensure the path in `personalInfo.js` matches your file location:
+   ```javascript
+   resumeFile: "/files/Prudhvi_Sairam_Chundru_Resume.pdf"
+   ```
 
-### `npm run build` fails to minify
+## 📬 Contact Form
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The contact form uses Formspree for handling submissions:
+
+1. The form is already configured with your Formspree endpoint
+2. Submissions will be sent to your email
+3. You can view and manage submissions in your Formspree dashboard
+
+## 📱 Mobile Responsiveness
+
+The portfolio is fully responsive and optimized for all screen sizes:
+
+- Mobile-first approach
+- Adaptive layout elements
+- Responsive typography
+- Mobile-friendly navigation
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Prudhvi-19/portfolio/issues).
+
+## 📞 Contact
+
+Prudhvi Sairam Chundru - [chundru.prudhvisairam@gmail.com](mailto:chundru.prudhvisairam@gmail.com)
+
+Project Link: [https://github.com/Prudhvi-19/portfolio](https://github.com/Prudhvi-19/portfolio)
+
+---
+
+Made with ❤️ by Prudhvi Sairam Chundru

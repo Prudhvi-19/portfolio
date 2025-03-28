@@ -3,11 +3,11 @@ import { personalInfo } from '../data/personalInfo';
 
 const Hero = () => {
   return (
-    <section id="home" className="pt-20 lg:pt-0 h-screen flex items-center bg-gradient-to-r from-blue-50 to-gray-50">
+    <section id="home" className="min-h-screen pt-28 md:pt-24 lg:pt-0 flex items-center bg-gradient-to-r from-blue-50 to-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 lg:pr-10">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900">
-            Hi, I'm <span className="text-blue-600">{personalInfo.name}</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
+            Hi, I'm <span className="text-blue-600 block sm:inline">{personalInfo.name}</span>
           </h1>
           <p className="mt-4 text-xl sm:text-2xl font-medium text-gray-600">
             {personalInfo.title}

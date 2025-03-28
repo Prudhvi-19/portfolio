@@ -31,6 +31,17 @@ export const projectsData = [
       ],
       image: "/assets/images/cnn-project.jpg", // Placeholder - replace with actual project image
       link: "https://github.com/Prudhvi-19/Breast-Cancer-Classification-using-CNN"
-    }
+    },
+    {
+      title: "Personal Portfolio Website",
+      technologies: ["React", "Tailwind CSS", "JavaScript", "Formspree", "GitHub Pages"],
+      description: [
+        "Designed and developed a modern, responsive portfolio website using React and Tailwind CSS with a data-driven architecture that separates content from presentation for easy maintenance.",
+        "Implemented mobile-first responsive design principles with optimized layout components, ensuring seamless user experience across mobile, tablet, and desktop devices.",
+        "Integrated third-party APIs including Formspree for backend contact form processing, with proper error handling and user feedback mechanisms."
+      ],
+      image: "/assets/images/portfolio-project.jpg",
+      link: "https://github.com/Prudhvi-19/portfolio"
+    },
   ];
   
