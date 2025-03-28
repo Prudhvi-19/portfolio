@@ -29,7 +29,7 @@ const About = () => {
             <div className="mt-6">
               <a
                 href={personalInfo.resumeFile}
-                download
+                download="Prudhvi_Sairam_Chundru_Resume.pdf"
                 className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 transition-all"
               >
                 <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

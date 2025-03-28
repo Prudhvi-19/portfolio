@@ -30,7 +30,7 @@ const Hero = () => {
             </a>
             <a
               href={personalInfo.resumeFile}
-              download
+              download="Prudhvi_Sairam_Chundru_Resume.pdf"
               className="px-6 py-3 flex items-center bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-all shadow-md"
             >
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
